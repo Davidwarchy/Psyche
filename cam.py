@@ -11,20 +11,25 @@ import time
 cam =cv2.VideoCapture(0)
 t = time.strftime('%Y%m%d%H%M%S',time.gmtime())
 
-def get_light_intensity():
+def camlad():
     cam =cv2.VideoCapture(0)
     ret, frame = cam.read()
     
     if not ret:
         print("error")
     else:
-        f = open('light_intensity.psy','a')
-        f.write(time.strftime('%Y%m%d%H%M%S',time.gmtime())+':'+str(frame.mean())+'\n')
-        f.close()
-        
+        cv2.imwrite('j.png',frame)
     cam.release()
-    cv2.destroyAllWindows()
-    
-while True:
-    get_light_intensity()
-    time.sleep(60)
+    return frame
+
+from PIL import Image
+import numpy as np
+
+x1 = camlad()
+x2 = camlad()
+
+def comp():
+    xx = x1 - x2
+    xx = np.dot(xx,[0.2989,0.5870,0.1140])
+    imag = Image.fromarray(xx,'1')
+    imag.show()
