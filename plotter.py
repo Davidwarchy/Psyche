@@ -72,3 +72,17 @@ b = comp_daily(p)
 b= b.fillna(method='ffill')
 b = b.fillna(method='bfill')
 #b['20200910'].plot().plot(b['20200909'])
+
+import matplotlib.pyplot as plt
+def freq_components(p):
+    s = p[-int(5e4):].fillna(0)#eliminate nan values to make computation easier. concerned missing values may significantly affect analysis
+    n = np.array(s).reshape((50000,))#flatten values to form a 1d signal
+    n = n - n.mean()#get average to make dc value 0
+    ff = np.fft.fft(n)
+    N =  len(n)
+    fx = np.linspace(0,2*np.pi/(60),N)
+    plt.stem(fx[:N//2],abs(ff)[:N//2])
+    #suprising this is that with even with missing data values the most dominant frequency is that which corresponds to one day (~86400s). 
+    #also pleasantly surprised that the frequecies for 0.5, 0.25 of a day are next largest.
+   #0.96 of a day period
+   #I think I should publish my understanding of fourier transform - it is a representation of the amplitudes and phases of multifreq sinusoids. complex numbers are just a convenient way of representation, nothing more than that should be interpreted. 

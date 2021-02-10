@@ -1,0 +1,12 @@
+a strong enough nn is sufficient to detect tiny changes in ambient temperature.
+
+this comes if an nn is made of electronic components whose conductivity can vary with temperature.
+
+if affairs are conducted this way (i.e., the nn nodes are composed of physical components and their output is continuous and free to assume any value) then we may get a temperature sensor, a temperature time-gradient sensor, etc).
+
+as much as the previous point is savory, it doesn't seem at all plain. It's promise might lie some other place. if we connect identical pieces of metal together with conductors, can we obtain information about the enviroment?
+
+#times are in GMT
+Sounds
+Hours of Golden Silence: 0000 - 0600hrs
+Notch of Silence: ~1500hrs

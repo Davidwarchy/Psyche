@@ -8,7 +8,7 @@ import pyaudio
 import numpy as np
 # import matplotlib.pyplot as plt
 import time
-
+ 
 def son():
     CHUNK = 1024
     FORMAT = pyaudio.paInt16
@@ -33,7 +33,7 @@ def son():
     n = np.hstack(frames)
     i = abs(n).mean()
     #create file where to write log info
-    f = open('son.psy', 'a')
+    f = open('son_20210210.psy', 'a')
     f.write(time.strftime('%Y%m%d%H%M%S',time.gmtime())+":"+str(i)+'\n')
     f.close()
     stream.stop_stream()

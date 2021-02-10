@@ -18,7 +18,8 @@ def get_light_intensity():
     if not ret:
         print("error")
     else:
-        f = open('light_intensity.psy','a')
+        print("file")
+        f = open('light_intensity_20210202.psy','a')
         f.write(time.strftime('%Y%m%d%H%M%S',time.gmtime())+':'+str(frame.mean())+'\n')
         f.close()
         
