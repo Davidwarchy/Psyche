@@ -210,3 +210,10 @@ def makeTop(L):
 '''
 worth noting that creating the top from the collection {{},{1},{2},{3},{4}} creates the powerset.
 '''
+
+'''
+on a high level I would love to make note of some important parts of a mathematical system.
+first the addition of new methods to the system should have data available for analysis regressed against the new integrated system (the system as a whole with the new method in it)
+addition of data should also prompt the system to initiate an analysis.
+the methods might have ways of identifying them, to make note of any flags that may have been raised. also while operating on any data, a badge should be appended to the data to indicate what methods have acted on it. this way, by when data is through being acted upon by methods, it will have a track of badges, showing where flags were raised. additional tests can be done to see if flags would be raised if some methods preceding the method that raised the flag are removed from the sequence of analysis.
+'''

@@ -232,3 +232,9 @@ def sumOfLiouville (n):
 #         if ( isPrime (p)):
 #             chebyshev += log(p)
 #     return chebyshev
+
+#a continuous fibonacci function
+#returns complex numbers
+def nfib(n):
+    c = ((phi)**n - (-1.0)**n/(phi)**n)/np.sqrt(5.0)
+    return c.real,c.imag
