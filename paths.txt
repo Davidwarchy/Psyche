@@ -1,0 +1,2 @@
+{"root":"C:/Users/JOHN WARUTUMO/Desktop/Psyche/",
+"math":"C:/Users/JOHN WARUTUMO/Desktop/Psyche/Frequency Analysis/"}
